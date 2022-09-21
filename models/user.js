@@ -35,6 +35,10 @@ User.init(
         len: [8],
       },
     },
+    ingredients: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    }
   },
   {
     hooks: {
