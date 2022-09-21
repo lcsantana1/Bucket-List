@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS placeholder_db;
-CREATE DATABASE placeholder_db;
+DROP DATABASE IF EXISTS recipe_db;
+CREATE DATABASE recipe_db;
