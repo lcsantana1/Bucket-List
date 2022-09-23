@@ -1,6 +1,21 @@
 const router = require('express').Router();
-const { Recipe } = require('../../models');
+const { Recipe, User } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+router.get('/', async (req, res) => {
+  Recipe.findAll({
+    include: [
+      {
+        model: User,
+        attributes: ['name']
+      }
+    ]
+  })
+    .then(recipeData => res.json(recipeData))
+    .catch(err => {
+      res.status(500).json(err);
+    })
+})
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -14,6 +29,24 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+router.put('/:id', withAuth, async (req, res) => {
+  Recipe.update(req.body, {
+    where: {
+      id: req.params.id
+    },
+  })
+    .then((recipe) => {
+      return recipe.findAll({
+        where:
+          { recipe_id: req.params.id }
+      })
+    })
+    .then((updatedRecipe) => res.json(updatedRecipe))
+    .catch((err) => {
+      res.status(400).json(err);
+    })
+})
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
