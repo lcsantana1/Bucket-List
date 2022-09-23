@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Recipe, User } = require('../../models');
+const { Recipe, User, Ingredient } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -16,6 +16,24 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
     })
 })
+
+router.get('/:name', withAuth, async (req, res) => {
+  Recipe.findOne({
+    where: {
+      name: req.params.name
+    },
+    include: [
+      {
+        model: Ingredient,
+        attributes: ['id', 'ingredient_name']
+      }
+    ]
+  })
+    .then(recipeData => res.json(recipeData))
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -39,7 +57,10 @@ router.put('/:id', withAuth, async (req, res) => {
     .then((recipe) => {
       return recipe.findAll({
         where:
-          { recipe_id: req.params.id }
+          { 
+            recipe_id: req.params.id,
+            user_id: req.session.user_id
+          }
       })
     })
     .then((updatedRecipe) => res.json(updatedRecipe))

@@ -18,10 +18,10 @@ Recipe.init(
         description: {
             type: DataTypes.STRING,
         },
-        ingredients: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+        // ingredients: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
