@@ -27,37 +27,23 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.post('/', withAuth, async (req, res) => {
-  try {
-    const newRecipe = await Recipe.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
+router.get('/login',  async (req, res) => {
+  
+    
+    res.render('login')
+    
 
-    res.status(200).json(newRecipe);
-  } catch (err) {
-    res.status(400).json(err);
-  }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
-  try {
-    const recipeData = await Recipe.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
+router.get('/signup',  async (req, res) => {
+  
+    
+  res.render('signup')
+  
 
-    if (!recipeData) {
-      res.status(404).json({ message: 'No recipe found with this id!' });
-      return;
-    }
-
-    res.status(200).json(recipeData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
 });
+
+
+
 
 module.exports = router;
