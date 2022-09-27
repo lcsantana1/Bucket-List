@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       recipes, 
-      // logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -39,6 +39,13 @@ router.get('/signup',  async (req, res) => {
     
   res.render('signup')
   
+
+});
+
+router.get('/builder', async (req, res) => {
+
+  res.render('recipeBuilder')
+
 
 });
 

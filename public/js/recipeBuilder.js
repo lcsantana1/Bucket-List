@@ -1,31 +1,36 @@
+const saveBtn = document.getElementById('saveBtn');
 
 const recipeBuilder = async (event) => {
     event.preventDefault();
 
-    const name = document.getElementById('#exampleName').value.trim();
-    const description = document.getElementById('#exampleDescription').value.trim();
-    const ingredients = document.getElementById('#ingredientList').value.trim();
+    const name = document.getElementById('exampleRecipe').value();
+    console.log(name);
+    const description = document.getElementById('exampleDescription');
+    const ingredients = document.getElementById('ingredientList').value().split();
+    console.log(ingredients);
     const ingredientsAsArray = ingredients.split(',');
-
+    
     const makeRec = await createRecipe(name, description);
+    console.log(makeRec);
     const makeIng = await makeIngredients(ingredientsAsArray);
-};
+}
 
-document
-    .getElementById('#saveBtn')
-    .addEventListener('submit', recipeBuilder);
+
+document.addEventListener('submit', recipeBuilder);
+
 
 // Helpers
 
-function createRecipe(name, description) {
+async function createRecipe(name, description) {
     if (name && description) {
         const response = await fetch(`/api/recipes`, {
             method: 'POST',
             body: JSON.stringify({ name, description })
         });
+    }
 }
 
-function makeIngredients(ingredients) {
+async function makeIngredients(ingredients) {
     if (ingredients) {
         for (let i = 0; i < ingredients.length; i++) {
             const ingredient = ingredients[i];
