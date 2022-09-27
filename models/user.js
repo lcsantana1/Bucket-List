@@ -34,12 +34,7 @@ User.init(
       validate: {
         len: [8],
       },
-    },
-    // this saves ONE ingredient at a time...not multiple
-    // ingredients: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    // }
+    }
   },
   {
     hooks: {
