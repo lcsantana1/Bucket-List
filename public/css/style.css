@@ -1,0 +1,24 @@
+#greens,
+#chickenWing {
+    transition: all 1s ease;
+}
+
+#greens{
+    transform: translateX(-100%);
+}
+
+#chickenWing{
+    transform: translateY(-100%);
+}
+
+.plate:hover #greens{
+    transform: translateX(0%)
+}
+.plate:hover #chickenWing {
+    transition-delay: 300ms;
+    transform: translateY(0%)
+}
+
+.plate{
+    cursor:pointer;
+}
