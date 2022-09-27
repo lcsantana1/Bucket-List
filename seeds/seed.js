@@ -2,7 +2,7 @@ const sequelize = require('../config/connection');
 const { Ingredient, Recipe, User, RecipeTag } = require('../models');
 
 const userData = require('./userData.json');
-const ingredientsData = require('./ingredientsData.json');
+const ingredientData = require('./ingredientsData.json');
 const recipeData = require('./recipesData.json');
 const recipeTagData = require('./recipeTagData.json');
 
@@ -15,7 +15,7 @@ const seedDatabase = async () => {
         returning: true,
     });
 
-    for (const ingredient of ingredientsData) {
+    for (const ingredient of ingredientData) {
         await Ingredient.create({
             ...ingredient,
         });
@@ -28,9 +28,9 @@ const seedDatabase = async () => {
         });
     }
 
-    for (const recipe_tag of recipeTagData) {
+    for (const recipeTag of recipeTagData) {
         await RecipeTag.create({
-            ...recipe_tag,
+            ...recipeTag,
         });
     }
 

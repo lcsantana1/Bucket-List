@@ -36,21 +36,28 @@ router.get('/:name', withAuth, async (req, res) => {
 });
 
 router.get('/:id', withAuth, async (req, res) => {
-  Recipe.findOne({
-    where: {
-      id: req.params.id
-    },
-    include: [
-      {
-        model: Ingredient,
-        attributes: ['id', 'ingredient_name']
-      }
-    ]
-  })
-    .then(recipeData => res.json(recipeData))
-    .catch(err => {
-      res.status(500).json(err);
+  try {
+    const recipeData = await Recipe.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [
+        {
+          model: Ingredient,
+          attributes: ['id', 'ingredient_name']
+        }
+      ]
     });
+      const recipe = recipeData.get({ plain: true });
+
+      res.render("homepage", {
+        recipe, 
+        logged_in: req.session.logged_in
+      });
+  }
+  catch (err) {
+    res.status(500).json(err);
+  };
 });
 
 router.post('/', withAuth, async (req, res) => {
@@ -75,10 +82,10 @@ router.put('/:id', withAuth, async (req, res) => {
     .then((recipe) => {
       return recipe.findAll({
         where:
-          { 
-            recipe_id: req.params.id,
-            user_id: req.session.user_id
-          }
+        {
+          recipe_id: req.params.id,
+          user_id: req.session.user_id
+        }
       })
     })
     .then((updatedRecipe) => res.json(updatedRecipe))
