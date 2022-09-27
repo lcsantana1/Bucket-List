@@ -35,6 +35,24 @@ router.get('/:name', withAuth, async (req, res) => {
     });
 });
 
+router.get('/:id', withAuth, async (req, res) => {
+  Recipe.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Ingredient,
+        attributes: ['id', 'ingredient_name']
+      }
+    ]
+  })
+    .then(recipeData => res.json(recipeData))
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
