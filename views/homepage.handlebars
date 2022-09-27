@@ -1,6 +1,6 @@
-<h1>hello world</h1>
+<h1>Welcome to Recipe Finder!</h1>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+{{!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
@@ -30,13 +30,13 @@
         data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-    </button>
+    </button> --}}
 
     {{#each recipes as |recipe|}}
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+    <div class="card" style="width: 80vw;">
+        {{!-- <img src="..." class="card-img-top" alt="..."> --}}
         <div class="card-body">
-            <a href="#/recipe/{{recipe.id}}">
+            <a href="#/recipes/{{recipe.id}}">
                 <h5 class="card-title">{{recipe.name}}</h5>
             </a>
         </div>
