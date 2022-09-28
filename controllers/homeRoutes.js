@@ -14,29 +14,29 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-  const recipes = recipeData.map((recipe)=> recipe.get({ plain: true}));
+    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      recipes, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      recipes,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
   }
 })
 
-router.get('/login',  async (req, res) => {
-  
-    
-    res.render('login')
-    
+router.get('/login', async (req, res) => {
+
+
+  res.render('login')
+
 
 });
 
-router.get('/signup',  async (req, res) => {
-  
-    
+router.get('/signup', async (req, res) => {
+
+
   res.render('signup')
 
 
@@ -48,8 +48,6 @@ router.get('/builder', async (req, res) => {
 
 
 });
-
-
 
 
 module.exports = router;

@@ -2,88 +2,79 @@
     <form id="recipe-form">
         <h1>Recipe Builder</h1>
         <div class="mb-3">
-            {{!-- <label for="exampleRecipe" class="form-label">Name</label>
-            <input type="text" class="form-control" id="exampleRecipe" aria-describedby="recipeHelp">
-            <div id="recipeHelp" class="form-text">Please enter the name of your recipe.</div> --}}
             <p>Recipe Name</p>
             <input type="text" class="recipe-builder" id="exampleRecipe">
         </div>
         <div class="mb-3">
-            {{!-- <label for="exampleDescription" class="form-label">Description</label>
-            <input type="text" class="form-control" id="exampleDescription" aria-describedby="descriptionHelp">
-            <div id="descritpionHelp" class="form-text">Please describe your recipe.</div> --}}
             <p>Description</p>
             <p>Please include directions!!!</p>
             <input type="text" class="recipe-builder" id="exampleDescription">
         </div>
         <div class="mb-3">
-            {{!-- <label for="ingredientList" class="form-label">Ingredients</label>
-            <input type="text" class="form-control" id="ingredientList" aria-describedby="ingredientHelp">
-            <div id="ingredientHelp" class="form-text">Please type your ingredients in as a comma-separated list.</div> --}}
             <p>Ingredient List</p>
             <p>Please type your ingredients in as a comma-separated list.</p>
             <input type="text" class="recipe-builder" id="ingredientList">
-            
         </div>
 
         <button type="submit" class="btn btn-outline-danger" id="saveBtn">Create Recipe
-             <div class="plate">
-        <svg width="120" height="126" viewBox="0 0 120 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="chickenPlate">
-                <g id="Frame 1">
-                    <rect width="120" height="100" transform="translate(0 13)" fill="white" />
-                    <g id="plate">
-                        <ellipse id="Ellipse 5" cx="60" cy="63.5" rx="49" ry="49.5" fill="#EDEBEB" />
-                        <ellipse id="Ellipse 6" cx="59.5288" cy="63.976" rx="43.8173" ry="44.2644" fill="#FBFAFA" />
+            <div class="plate">
+                <svg width="120" height="126" viewBox="0 0 120 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="chickenPlate">
+                        <g id="Frame 1">
+                            <rect width="120" height="100" transform="translate(0 13)" fill="white" />
+                            <g id="plate">
+                                <ellipse id="Ellipse 5" cx="60" cy="63.5" rx="49" ry="49.5" fill="#EDEBEB" />
+                                <ellipse id="Ellipse 6" cx="59.5288" cy="63.976" rx="43.8173" ry="44.2644"
+                                    fill="#FBFAFA" />
+                            </g>
+                        </g>
+                        <g id="greens">
+                            <path id="Star 1"
+                                d="M86.454 28.0252L87.0817 48.4704L107.095 54.4503L87.4696 61.1061L88.0972 81.5513L75.3404 65.2197L55.715 71.8755L67.4563 55.1262L54.6994 38.7946L74.7128 44.7745L86.454 28.0252Z"
+                                fill="#20AF40" />
+                            <path id="Polygon 1" d="M89.8827 48.7256L64.6422 86.846L47.517 34.0075L89.8827 48.7256Z"
+                                fill="#20AF40" />
+                            <path id="Polygon 2" d="M58.6107 61.4909L61.2172 18.935L93.4065 82.5463L58.6107 61.4909Z"
+                                fill="#20AF40" />
+                            <path id="Polygon 3" d="M30.1597 68.9319L52.5783 28.6633L73.2775 80.0922L30.1597 68.9319Z"
+                                fill="#20AF40" />
+                            <path id="Polygon 4" d="M59.5288 55.4915L60.7046 98.3158L23.1934 38.1503L59.5288 55.4915Z"
+                                fill="#20AF40" />
+                        </g>
+                        <g id="chickenWing">
+                            <g id="Ellipse 2" filter="url(#filter0_d_0_1)">
+                                <ellipse cx="45.6332" cy="71.6199" rx="17.2326" ry="5.49253"
+                                    transform="rotate(-37.412 45.6332 71.6199)" fill="#D9D9D9" />
+                            </g>
+                            <g id="Ellipse 1">
+                                <ellipse cx="68.095" cy="54.4391" rx="24.3025" ry="18.4749"
+                                    transform="rotate(-37.412 68.095 54.4391)" fill="#AB7E09" />
+                                <path
+                                    d="M87.001 39.9781C89.9852 43.8796 90.6294 49.0305 89.199 54.2429C87.7684 59.4557 84.267 64.6995 79.0155 68.7163C73.764 72.7332 67.7864 74.7397 62.3809 74.7557C56.9759 74.7717 52.1732 72.8016 49.189 68.9001C46.2048 64.9986 45.5607 59.8477 46.9911 54.6353C48.4216 49.4225 51.923 44.1787 57.1745 40.1619C62.4261 36.145 68.4036 34.1385 73.8091 34.1225C79.2142 34.1065 84.0168 36.0766 87.001 39.9781Z"
+                                    stroke="black" stroke-opacity="0.2" />
+                            </g>
+                            <ellipse id="Ellipse 3" cx="27.1394" cy="75.0787" rx="7.51167" ry="7.98913"
+                                transform="rotate(-37.412 27.1394 75.0787)" fill="#DED2D2" />
+                            <ellipse id="Ellipse 4" cx="33.9738" cy="86.1958" rx="8.83725" ry="9.98642"
+                                transform="rotate(-37.412 33.9738 86.1958)" fill="#DED2D2" />
+                        </g>
                     </g>
-                </g>
-                <g id="greens">
-                    <path id="Star 1"
-                        d="M86.454 28.0252L87.0817 48.4704L107.095 54.4503L87.4696 61.1061L88.0972 81.5513L75.3404 65.2197L55.715 71.8755L67.4563 55.1262L54.6994 38.7946L74.7128 44.7745L86.454 28.0252Z"
-                        fill="#20AF40" />
-                    <path id="Polygon 1" d="M89.8827 48.7256L64.6422 86.846L47.517 34.0075L89.8827 48.7256Z"
-                        fill="#20AF40" />
-                    <path id="Polygon 2" d="M58.6107 61.4909L61.2172 18.935L93.4065 82.5463L58.6107 61.4909Z"
-                        fill="#20AF40" />
-                    <path id="Polygon 3" d="M30.1597 68.9319L52.5783 28.6633L73.2775 80.0922L30.1597 68.9319Z"
-                        fill="#20AF40" />
-                    <path id="Polygon 4" d="M59.5288 55.4915L60.7046 98.3158L23.1934 38.1503L59.5288 55.4915Z"
-                        fill="#20AF40" />
-                </g>
-                <g id="chickenWing">
-                    <g id="Ellipse 2" filter="url(#filter0_d_0_1)">
-                        <ellipse cx="45.6332" cy="71.6199" rx="17.2326" ry="5.49253"
-                            transform="rotate(-37.412 45.6332 71.6199)" fill="#D9D9D9" />
-                    </g>
-                    <g id="Ellipse 1">
-                        <ellipse cx="68.095" cy="54.4391" rx="24.3025" ry="18.4749"
-                            transform="rotate(-37.412 68.095 54.4391)" fill="#AB7E09" />
-                        <path
-                            d="M87.001 39.9781C89.9852 43.8796 90.6294 49.0305 89.199 54.2429C87.7684 59.4557 84.267 64.6995 79.0155 68.7163C73.764 72.7332 67.7864 74.7397 62.3809 74.7557C56.9759 74.7717 52.1732 72.8016 49.189 68.9001C46.2048 64.9986 45.5607 59.8477 46.9911 54.6353C48.4216 49.4225 51.923 44.1787 57.1745 40.1619C62.4261 36.145 68.4036 34.1385 73.8091 34.1225C79.2142 34.1065 84.0168 36.0766 87.001 39.9781Z"
-                            stroke="black" stroke-opacity="0.2" />
-                    </g>
-                    <ellipse id="Ellipse 3" cx="27.1394" cy="75.0787" rx="7.51167" ry="7.98913"
-                        transform="rotate(-37.412 27.1394 75.0787)" fill="#DED2D2" />
-                    <ellipse id="Ellipse 4" cx="33.9738" cy="86.1958" rx="8.83725" ry="9.98642"
-                        transform="rotate(-37.412 33.9738 86.1958)" fill="#DED2D2" />
-                </g>
-            </g>
-            <defs>
-                <filter id="filter0_d_0_1" x="27.5414" y="60.2748" width="36.1837" height="30.6902"
-                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha" />
-                    <feOffset dy="4" />
-                    <feGaussianBlur stdDeviation="2" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
-                </filter>
-            </defs>
-        </svg>
-    </div>
+                    <defs>
+                        <filter id="filter0_d_0_1" x="27.5414" y="60.2748" width="36.1837" height="30.6902"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="4" />
+                            <feGaussianBlur stdDeviation="2" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
         </button>
 
     </form>
