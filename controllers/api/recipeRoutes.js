@@ -17,23 +17,23 @@ router.get('/', async (req, res) => {
     })
 })
 
-router.get('/:name', withAuth, async (req, res) => {
-  Recipe.findOne({
-    where: {
-      name: req.params.name
-    },
-    include: [
-      {
-        model: Ingredient,
-        attributes: ['id', 'ingredient_name']
-      }
-    ]
-  })
-    .then(recipeData => res.json(recipeData))
-    .catch(err => {
-      res.status(500).json(err);
-    });
-});
+// router.get('/:id', withAuth, async (req, res) => {
+//   Recipe.findOne({
+//     where: {
+//       id: req.params.id
+//     },
+//     include: [
+//       {
+//         model: Ingredient,
+//         attributes: ['id', 'ingredient_name']
+//       }
+//     ]
+//   })
+//     .then(recipeData => res.json(recipeData))
+//     .catch(err => {
+//       res.status(500).json(err);
+//     });
+// });
 
 router.get('/:id', withAuth, async (req, res) => {
   try {
@@ -48,12 +48,12 @@ router.get('/:id', withAuth, async (req, res) => {
         }
       ]
     });
-      const recipe = recipeData.get({ plain: true });
-
-      res.render("homepage", {
-        recipe, 
-        logged_in: req.session.logged_in
-      });
+    const recipe = recipeData.get({ plain: true });
+    console.log(recipe)
+    res.render("homepage", {
+      recipe,
+      logged_in: req.session.logged_in
+    });
   }
   catch (err) {
     res.status(500).json(err);
