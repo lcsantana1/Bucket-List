@@ -45,10 +45,15 @@ router.get('/:id', withAuth, async (req, res) => {
         {
           model: Ingredient,
           attributes: ['id', 'ingredient_name']
-        }
+        },
+        {
+          model: User,
+          attributes: ["id", "name"]
+        },
       ]
     });
     const recipe = recipeData.get({ plain: true });
+    console.log(recipe);
     res.render("recipe", {
       recipe,
       logged_in: req.session.logged_in
