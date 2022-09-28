@@ -49,8 +49,7 @@ router.get('/:id', withAuth, async (req, res) => {
       ]
     });
     const recipe = recipeData.get({ plain: true });
-    console.log(recipe)
-    res.render("homepage", {
+    res.render("recipe", {
       recipe,
       logged_in: req.session.logged_in
     });
@@ -86,25 +85,29 @@ router.post('/', async (req, res) => {
 // });
 
 router.put('/:id', withAuth, async (req, res) => {
-  Recipe.update(req.body, {
-    where: {
-      id: req.params.id
-    },
-  })
-    .then((recipe) => {
-      return recipe.findAll({
-        where:
-        {
-          recipe_id: req.params.id,
-          user_id: req.session.user_id
-        }
-      })
+  try {
+    const recipedata = Recipe.update(req.body, {
+      where: {
+        id: req.params.id
+      }
+      // (recipe) => {
+      //     return recipe.findAll({
+      //       where:
+      //       {
+      //         recipe_id: req.params.id,
+      //         user_id: req.session.user_id
+      //       }
+      //     })
+      //   }
+
+      // res.json(updatedRecipe)
+
+
     })
-    .then((updatedRecipe) => res.json(updatedRecipe))
-    .catch((err) => {
-      res.status(400).json(err);
-    })
-})
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {

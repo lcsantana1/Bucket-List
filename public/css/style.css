@@ -37,3 +37,22 @@
     transform: translateY(0%)
 }
 
+
+.plate{
+    cursor:pointer;
+}
+
+
+.recipeName {
+    font-family: serif;
+}
+
+.recipeD{
+    font-family: sans-serif;
+    color: grey;
+}
+
+.recipeUser{
+    font-weight: bold;
+}
+
