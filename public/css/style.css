@@ -1,4 +1,12 @@
 
+.recipe-builder {
+    height: 40px;
+    border-radius: 7px;
+}
+
+.plate{
+    cursor:pointer;
+
 .recipeCard:hover{
     transform: translate(-2px,-2px);
     box-shadow: 5px 5px 0 #fec445;
@@ -29,6 +37,7 @@
     transform: translateY(0%)
 }
 
+
 .plate{
     cursor:pointer;
 }
@@ -46,3 +55,4 @@
 .recipeUser{
     font-weight: bold;
 }
+
