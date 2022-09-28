@@ -1,3 +1,12 @@
+.recipe-builder {
+    height: 40px;
+    border-radius: 7px;
+}
+
+.plate{
+    cursor:pointer;
+}
+
 #greens,
 #chickenWing {
     transition: all 1s ease;
@@ -17,8 +26,4 @@
 .plate:hover #chickenWing {
     transition-delay: 300ms;
     transform: translateY(0%)
-}
-
-.plate{
-    cursor:pointer;
 }

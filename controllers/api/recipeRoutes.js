@@ -60,11 +60,13 @@ router.get('/:id', withAuth, async (req, res) => {
   };
 });
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
+  console.log(req.body);
   try {
     const newRecipe = await Recipe.create({
       ...req.body,
-      user_id: req.session.user_id,
+      // user_id: req.session.user_id,
+      user_id: 1,
     });
 
     res.status(200).json(newRecipe);
@@ -72,6 +74,16 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+// router.post('/', (req, res) => {
+//   Ingredient.create({
+//     ingredient_name: req.body.ingredient_name
+//   })
+//     .then(ingredientData => res.json(ingredientData))
+//     .catch(err => {
+//       res.status(500).json(err);
+//     });
+// });
 
 router.put('/:id', withAuth, async (req, res) => {
   Recipe.update(req.body, {
