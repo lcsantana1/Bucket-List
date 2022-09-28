@@ -1,3 +1,4 @@
+
 .recipeCard:hover{
     transform: translate(-2px,-2px);
     box-shadow: 5px 5px 0 #fec445;
@@ -7,3 +8,27 @@
     overflow: auto;
 }
 
+#greens,
+#chickenWing {
+    transition: all 1s ease;
+}
+
+#greens{
+    transform: translateX(-100%);
+}
+
+#chickenWing{
+    transform: translateY(-100%);
+}
+
+.plate:hover #greens{
+    transform: translateX(0%)
+}
+.plate:hover #chickenWing {
+    transition-delay: 300ms;
+    transform: translateY(0%)
+}
+
+.plate{
+    cursor:pointer;
+}
