@@ -68,11 +68,19 @@ If you have any questions please do not hesitate to reach out!
 ## **RESOURCES/TECHNOLOGIES USED**
 
 -Help from TA's and Instructor
+
 -Stack OverFlow
--Boostrap 5.2 
+
+-Boostrap 5.2
+
 -Node JS
+
 -Express JS
+
 -Handlebars JS
+
 -MYSQL 2
+
 -Sequelize
+
 
