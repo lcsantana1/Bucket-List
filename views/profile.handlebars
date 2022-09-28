@@ -1,0 +1,12 @@
+
+<div>
+    {{#each recipes as |recipe|}}
+
+    <div class="card m-2 recipeCard" style="width: 10rem;">
+        <div class="">
+            <h6 class="card-title">{{recipe.name}}</h6>
+            <a href="api/recipes/{{recipe.id}}" class="btn btn-primary">Go To Recipe</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
