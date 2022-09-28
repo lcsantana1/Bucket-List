@@ -69,7 +69,7 @@ If you have any questions please do not hesitate to reach out!
 
 -Help from TA's and Instructor
 
--Stack OverFlow
+-Stack Overflow
 
 -Boostrap 5.2
 
@@ -82,5 +82,9 @@ If you have any questions please do not hesitate to reach out!
 -MYSQL 2
 
 -Sequelize
+
+-bcrypt
+
+-Dotenv
 
 
