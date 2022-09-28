@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Recipe, User } = require('../models');
+const { Recipe, User, Ingredient } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -48,6 +48,33 @@ router.get('/builder', async (req, res) => {
 
 
 });
+
+
+router.get('/profile',  async (req, res) => {
+  try {
+    const recipeData = await Recipe.findAll({
+      where: {
+        user_id: req.session.user_id 
+      },
+      include: [
+        {
+          model: Ingredient,
+          attributes: ['id', 'ingredient_name']
+        }
+      ]
+    });
+    const recipes = recipeData.map((recipe)=> recipe.get({ plain: true}));
+    res.render("profile", {
+      recipes,
+      logged_in: req.session.logged_in
+    });
+  }
+  catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  };
+});
+
 
 
 module.exports = router;
