@@ -17,24 +17,6 @@ router.get('/', async (req, res) => {
     })
 })
 
-// router.get('/:id', withAuth, async (req, res) => {
-//   Recipe.findOne({
-//     where: {
-//       id: req.params.id
-//     },
-//     include: [
-//       {
-//         model: Ingredient,
-//         attributes: ['id', 'ingredient_name']
-//       }
-//     ]
-//   })
-//     .then(recipeData => res.json(recipeData))
-//     .catch(err => {
-//       res.status(500).json(err);
-//     });
-// });
-
 router.get('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findOne({
@@ -59,13 +41,12 @@ router.get('/:id', withAuth, async (req, res) => {
   };
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   console.log(req.body);
   try {
     const newRecipe = await Recipe.create({
       ...req.body,
-      // user_id: req.session.user_id,
-      user_id: 1,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newRecipe);
@@ -73,16 +54,6 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
-// router.post('/', (req, res) => {
-//   Ingredient.create({
-//     ingredient_name: req.body.ingredient_name
-//   })
-//     .then(ingredientData => res.json(ingredientData))
-//     .catch(err => {
-//       res.status(500).json(err);
-//     });
-// });
 
 router.put('/:id', withAuth, async (req, res) => {
   try {

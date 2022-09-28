@@ -19,23 +19,9 @@ router.get('/:ingredient_name', (req, res) => {
     });
 });
 
-router.post('/recipes', async (req, res) => {
-  try {
-    const newRecipe = await Recipe.create({
-      ...req.body,
-      // user_id: req.session.user_id,
-      user_id: 1,
-    });
-
-    res.status(200).json(newRecipe);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
 router.post('/', (req, res) => {
   Ingredient.create({
-    ingredient_name: req.body.ingredient_name
+    ingredient_name: req.body.ingredient
   })
     .then(ingredientData => res.json(ingredientData))
     .catch(err => {

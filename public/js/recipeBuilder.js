@@ -5,7 +5,7 @@ function recipeBuilder(event) {
 
     const name = document.getElementById('exampleRecipe').value;
     const description = document.getElementById('exampleDescription').value;
-    const ingredients = document.getElementById('ingredientList').value.split(',');
+    const ingredients = document.getElementById('ingredientList').value.split(', ');
     
     createRecipe(name, description);
     makeIngredients(ingredients);
@@ -19,7 +19,7 @@ async function createRecipe(name, description) {
 
     const response = await fetch(`/api/recipes`, {
         method: 'POST',
-        header: {
+        headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({ name, description })
@@ -27,17 +27,19 @@ async function createRecipe(name, description) {
 }
 
 async function makeIngredients(ingredients) {
-    if (ingredients) {
-        for (let i = 0; i < ingredients.length; i++) {
-            const ingredient = ingredients[i];
-            const response = await fetch(`/api/ingredients`, {
-                method: 'POST',
-                body: JSON.stringify({ ingredient })
-            });
-        };
+    if (!ingredients) {
+        return
     };
-
-
+    for (let i = 0; i < ingredients.length; i++) {
+        const ingredient = ingredients[i];
+        const response = await fetch(`/api/ingredients`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ ingredient })
+        });
+    };
 };
 
 
