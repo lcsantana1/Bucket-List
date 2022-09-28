@@ -1,0 +1,9 @@
+.recipeCard:hover{
+    transform: translate(-2px,-2px);
+    box-shadow: 5px 5px 0 #fec445;
+}
+.recipeContainer{
+    height: 500px;
+    overflow: auto;
+}
+
