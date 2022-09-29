@@ -1,7 +1,7 @@
-{{!-- <h1 >Welcome to Recipe Finder!</h1> --}}
 <div class="row mt-3">
     <div class="col-md-8">
-        <img src="https://www.simplyrecipes.com/thmb/B2xgUqQY1pmOvddwlTSHEjyRD8A=/1200x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__Grilled-Cheese-Peppers-LEAD-1-e1775b583aaa40949ebe5ec5e4edc43b.jpg" class="img-fluid" alt="...">
+        <img src="https://www.simplyrecipes.com/thmb/B2xgUqQY1pmOvddwlTSHEjyRD8A=/1200x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__Grilled-Cheese-Peppers-LEAD-1-e1775b583aaa40949ebe5ec5e4edc43b.jpg"
+            class="img-fluid" alt="...">
     </div>
     <div class="row col-md-4 recipeContainer">
         {{#each recipes as |recipe|}}
@@ -11,9 +11,6 @@
                 class="card-img-top" alt="...">
             <div class="">
                 <h6 class="card-title">{{recipe.name}}</h6>
-                {{!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                    the card's
-                    content.</p> --}}
                 <a href="api/recipes/{{recipe.id}}" class="btn btn-danger">Go To Recipe</a>
             </div>
         </div>

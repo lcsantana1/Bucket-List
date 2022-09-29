@@ -1,6 +1,9 @@
+// Imports router, models, and withAuth helper
 const router = require('express').Router();
 const { Recipe, User, Ingredient } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+// This file creates /api/recipe routes
 
 router.get('/', async (req, res) => {
   Recipe.findAll({
@@ -66,25 +69,14 @@ router.put('/:id', withAuth, async (req, res) => {
       where: {
         id: req.params.id
       }
-      // (recipe) => {
-      //     return recipe.findAll({
-      //       where:
-      //       {
-      //         recipe_id: req.params.id,
-      //         user_id: req.session.user_id
-      //       }
-      //     })
-      //   }
-
-      // res.json(updatedRecipe)
-
-
     })
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
+// We have the route created for deleting a recipe for future development opportunities
+// Currently, we do not have a view component with this functionality
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
@@ -105,4 +97,5 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+// Exports router
 module.exports = router;

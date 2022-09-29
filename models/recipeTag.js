@@ -1,6 +1,9 @@
+// Imports model building tools
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection');
+
+// This file creates the recipe tag model
+// This model exists to connect recipes to their ingredients
 
 class RecipeTag extends Model {}
 
@@ -36,4 +39,5 @@ RecipeTag.init(
   }
 );
 
+// Exports recipe tag model
 module.exports = RecipeTag;

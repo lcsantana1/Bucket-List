@@ -1,5 +1,8 @@
+// Imports router and models
 const router = require('express').Router();
 const { User } = require('../../models');
+
+// This file creates /api/user routes
 
 router.post('/', async (req, res) => {
   try {
@@ -67,4 +70,5 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// Exports router
 module.exports = router;

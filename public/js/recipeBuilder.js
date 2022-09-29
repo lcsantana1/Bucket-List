@@ -1,5 +1,8 @@
+// This file contains the recipe creating functionality of the webpage
+
 const saveBtn = document.getElementById('saveBtn');
 
+// This function gathers information from the user input fields and executes helper functions for creating recipes and ingredients
 function recipeBuilder(event) {
     event.preventDefault();
 
@@ -15,8 +18,12 @@ document.addEventListener('submit', recipeBuilder);
 
 // Helpers
 
+// Creates recipes
 async function createRecipe(name, description) {
-
+    // Checks that parameters are passed in
+    if (!name && !description) {
+        return
+    };
     const response = await fetch(`/api/recipes`, {
         method: 'POST',
         headers: {
@@ -26,10 +33,13 @@ async function createRecipe(name, description) {
     });
 }
 
+// Creates ingredients
 async function makeIngredients(ingredients) {
+    // Checks that parameter is passed in 
     if (!ingredients) {
         return
     };
+    // Loops over ingredient list and creates a different ingredient for each
     for (let i = 0; i < ingredients.length; i++) {
         const ingredient = ingredients[i];
         const response = await fetch(`/api/ingredients`, {
@@ -41,18 +51,3 @@ async function makeIngredients(ingredients) {
         });
     };
 };
-
-
-
-// if (name && description && ingredients) {
-//     const response = await fetch(`/api/recipes`, {
-//         method: 'POST',
-//         body: JSON.stringify({ name, description, ingredientsAsArray })
-//     });
-
-//     if (response.ok) {
-//         document.location.replace('/profile');
-//     } else {
-//         alert('Failed to create project');
-//     }
-// }
