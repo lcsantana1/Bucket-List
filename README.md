@@ -1,5 +1,10 @@
 # Recipe Finder
 
+## Visual Example
+
+![Screen Shot 2022-09-29 at 11 11 15 AM](https://user-images.githubusercontent.com/106941418/193097035-7edd75c9-648f-4a60-ade9-880201514d71.png)
+
+
 ## Description
 
 This app allows users to post to and browse a recipe database. From the homepage, users can see a sample of the recipes available on the website. Users can create an account to be able to access recipe description pages and post their own recipes. While logged in, they can view their profile page, which contains links to the recipes that they have created. 
