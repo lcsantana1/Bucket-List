@@ -23,13 +23,19 @@ a:hover {
 .plate{
     cursor:pointer;
 }
+.recipeCard {
+    padding: 0;
+}
 
+.recipeCard a {
+    text-decoration: none;
+}
 .recipeCard:hover{
     transform: translate(-2px,-2px);
-    box-shadow: 5px 5px 0 red;
+    border: 3px red solid;
 }
 .recipeContainer{
-    height: 500px;
+    height: 50vh;
     overflow: auto;
 }
 

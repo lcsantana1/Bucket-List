@@ -1,32 +1,32 @@
 [
     {
         "name": "Green eggs and ham",
-        "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+        "description": "2 eggs, over easy. 1 ham. 2 cups baby spinach. - If you try them, you may like them.",
         "user_id": 1
     },
     {
         "name": "Hot Banana Water",
-        "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+        "description": "1 quart water. 2 banana peels. - Bring water to boil, add banana peels, cover and wait for 10 minutes.",
         "user_id": 1
     },
     {
         "name": "Peanut Butter and Jelly sandwhich",
-        "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+        "description": "You know what to do. Strawberry or Grape jelly, the choise is yours",
         "user_id": 1
     },
     {
         "name": "Spaghetti and Meat Balls",
-        "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+        "description": "2 tbsp olive oil. 12 oz ground beef. 6 oz parmesan. 1 lb spaghetti. 6 cups crushed tomatoes. fresh parsley",
         "user_id": 1
     },
     {
         "name": "Krabby Patty with Jellyfish Jelly",
-        "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+        "description": "1 patty. 2 sesame seed buns. 1 sliced tomato. lettuce. pickles. 1 slice cheddar cheese. secret sauce. jellyfish jelly.",
         "user_id": 1
     },
     {
         "name": "Roll 'Em Up",
-        "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+        "description": "Using a random number generator, combine 5 ingredients from 5 recipes. Flatten ingredients with a rolling pin. Bake at 400 degrees for 20 minutes.",
         "user_id": 1
     }
 ]
