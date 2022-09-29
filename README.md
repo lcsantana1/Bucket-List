@@ -1,77 +1,38 @@
-# **RECIPE-FINDER**
+# Recipe Finder
 
-Hello, Welcome to Recipe Finder!
+## Description
 
-## *Live URL:*
+This app allows users to post to and browse a recipe database. From the homepage, users can see a sample of the recipes available on the website. Users can create an account to be able to access recipe description pages and post their own recipes. While logged in, they can view their profile page, which contains links to the recipes that they have created. 
 
-https://murmuring-sea-48556.herokuapp.com/
+![badge](https://img.shields.io/badge/license-MIT-green)
 
+## Table of Contents
+    
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Technologies](#technologies)
+- [Questions](#questions)
+- [License](#license)
 
-## **VISUAL EXAMPLE**
+## Installation
+    
+The app is fully functional from the deployed page and does not require installation.
 
+## Usage
 
-## **DESCRIPTION**
+Link to Deployed Application: [Recipe Builder](https://murmuring-sea-48556.herokuapp.com/)
 
-Welcome to Recipe Finder, in this app, users will be able to create a account under the "Sign up" link. After creating a account, the user will be able to save recipes in the app to refer back to in the future and try to make a delicious meal at home!
-In this application, the user will also be able to create their own recipe under the "Builder" link to share with others!
-Get creative and show the world something new! 
+## Contributing
 
+This project is not accepting contributions at this time.
 
-## **USER STORY**
+## Tests 
 
-As a user
-I WANT TO create an account on Recipe Finder app.
-SO THAT I can LOGIN under my account to save recipes I enjoy and refer back to.
-Under the Recipe Finder app, I can also build my own recipe to share with others.
+No tests exist at this time.
 
-
-## **CRITERIA**
-
--Use Node.js and Express.js to create a RESTful API.
-
--Use Handlebars.js as the templating engine.
-
--Use MySQL and the Sequelize ORM for the database.
-
--Have both GET and POST routes for retrieving and adding new data.
-
--Be deployed using Heroku (with data).
-
--Use at least one new library, package, or technology that we haven’t discussed.
-
--Have a polished UI.
-
--Be responsive.
-
--Be interactive (i.e., accept and respond to user input).
-
--Have a folder structure that meets the MVC paradigm.
-
--Include authentication (express-session and cookies).
-
--Protect API keys and sensitive information with environment variables.
-
--Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-
--Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-
-## **QUESTIONS**
-
-If you have any questions please do not hesitate to reach out!
-
-[Lucas](https://github.com/mountaindriver)
-[Jacqueline](https://github.com/jackierhammer)
-[Taylor](https://github.com/taylorterrill)
-[Laura](https://github.com/lcsantana1)
-
-
-
-## **RESOURCES/TECHNOLOGIES USED**
-
--Help from TA's and Instructor
-
--Stack Overflow
+## Technologies
 
 -Boostrap 5.2
 
@@ -89,4 +50,15 @@ If you have any questions please do not hesitate to reach out!
 
 -Dotenv
 
+## Questions
 
+Please reach out with any questions about the application.
+
+#### Lucas's Github: [Lucas Freigenberg](https://github.com/mountaindriver)
+#### Jacqueline's Github: [Jacqueline Hammer](https://github.com/jackierhammer)
+#### Taylor's Github: [Taylor Terrill](https://github.com/taylorterrill)
+#### Laura's Github: [Laura Santana](https://github.com/lcsantana1)
+
+## License
+    
+This project is covered under the MIT license. 
