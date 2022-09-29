@@ -1,17 +1,55 @@
 <div class="row mt-3">
-    <div class="col-lg-8" style="height: 300px;">
-        <img src="https://www.simplyrecipes.com/thmb/B2xgUqQY1pmOvddwlTSHEjyRD8A=/1200x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__Grilled-Cheese-Peppers-LEAD-1-e1775b583aaa40949ebe5ec5e4edc43b.jpg" class="img-fluid" alt="Sandwhich">
+    <div class="col-lg-6">
+        <h3 class="text-danger">Ultimate Sandwhich</h3>
+        <img src="https://www.simplyrecipes.com/thmb/B2xgUqQY1pmOvddwlTSHEjyRD8A=/1200x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__Grilled-Cheese-Peppers-LEAD-1-e1775b583aaa40949ebe5ec5e4edc43b.jpg"
+            class="img-fluid" alt="Sandwhich">
     </div>
-    <div class="row col-lg-4 recipeContainer">
+    <div class="row col-lg-6 recipeContainer">
         {{#each recipes as |recipe|}}
 
-        <div class=" recipeCard m-1" style="width: 10rem;">
+        <div class="homeRecipeCard m-1" style="width: 12rem;">
             <a class="text-danger" href="api/recipes/{{recipe.id}}">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzt5kOhWe6P4_OOIvoNIIRkc8qWAHG2-nhDuBa2pmkLaOfL8KwtjaiIfzqzd1dNbfm564&usqp=CAU"
-                class="card-img-top" alt="{{recipe.name}}">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzt5kOhWe6P4_OOIvoNIIRkc8qWAHG2-nhDuBa2pmkLaOfL8KwtjaiIfzqzd1dNbfm564&usqp=CAU"
+                    class="card-img-top" alt="{{recipe.name}}">
                 <h6 class="card-title">{{recipe.name}}</h6>
             </a>
         </div>
         {{/each}}
     </div>
+</div>
+<div class="conatiner customBorder">
+    <section class="m-3">
+        <header>
+            <h3 class="text-danger">Autumn Recipes</h3>
+        </header>
+        <div class="row m-2">
+            <div class="col-sm my-2">
+                <div class="card" style="width: 18rem; height: 22rem;">
+                    <img src="/assests/images/pumpkin cookies.png" class="card-img-top" alt="pumpkin cookies" style="height: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">Pumpkin Chocolate Cookies</h5>
+                        <p class="card-text">Using pumpkin adds a lot of moisture to cookies which makes them amazing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <div class="card" style="width: 18rem; height: 22rem;">
+                    <img src="/assests/images/pumpkin-soup.png" class="card-img-top" alt="pumpkin soup" style="height: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">Pumpkin Soup</h5>
+                        <p class="card-text"> Pumpkin Soup is the perfect meal for any season</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm my-2">
+                <div class="card" style="width: 18rem; height: 22rem;">
+                    <img src="/assests/images/pumkpin-pie.png" class="card-img-top" alt="pumpkin pie">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger">Pumpkin Pie</h5>
+                        <p class="card-text">ALL our family gatherings have Pumpkin Pie!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
