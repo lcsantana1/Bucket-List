@@ -1,3 +1,5 @@
+// This file contains the logout functionality of the webpage
+
 const logout = async () => {
     const response = await fetch('/api/users/logout', {
       method: 'POST',

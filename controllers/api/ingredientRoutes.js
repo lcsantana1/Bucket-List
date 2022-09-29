@@ -1,5 +1,8 @@
+// Imports router and models
 const router = require('express').Router();
 const { Ingredient, Recipe } = require('../../models');
+
+// This file creates /api/ingredients routes
 
 router.get('/:ingredient_name', (req, res) => {
   Ingredient.findOne({
@@ -29,4 +32,5 @@ router.post('/', (req, res) => {
     });
 });
 
+// Exports router
 module.exports = router;

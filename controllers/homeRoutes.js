@@ -1,9 +1,12 @@
+// Imports router and models
 const router = require('express').Router();
 const { Recipe, User, Ingredient } = require('../models');
 
+// This file creates the routes to each part of the webpage
+
+// Takes user to homepage
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
     const recipeData = await Recipe.findAll({
       include: [
         {
@@ -12,11 +15,7 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-
-    // Serialize data so the template can read it
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
     res.render('homepage', {
       recipes,
       logged_in: req.session.logged_in
@@ -26,30 +25,22 @@ router.get('/', async (req, res) => {
   }
 })
 
+// Takes user to login page
 router.get('/login', async (req, res) => {
-
-
   res.render('login')
-
-
 });
 
+// Takes user to signup page
 router.get('/signup', async (req, res) => {
-
-
   res.render('signup')
-
-
 });
 
+// Takes user to recipe builder page
 router.get('/builder', async (req, res) => {
-
   res.render('recipeBuilder')
-
-
 });
 
-
+// Takes user to profile page
 router.get('/profile',  async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
@@ -75,6 +66,5 @@ router.get('/profile',  async (req, res) => {
   };
 });
 
-
-
+// Exports router
 module.exports = router;

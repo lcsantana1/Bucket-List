@@ -1,7 +1,10 @@
+// Imports models
 const User = require('./user');
 const Recipe = require('./recipe');
 const Ingredient = require('./ingredient');
 const RecipeTag = require('./recipeTag');
+
+// This file establishes the relationships between the models 
 
 User.hasMany(Recipe, {
   foreignKey: 'user_id',
@@ -22,4 +25,5 @@ Ingredient.belongsToMany(Recipe, {
   foreignKey: 'ingredient_id',
 })
 
+// Exports models
 module.exports = { User, Recipe, Ingredient, RecipeTag };
