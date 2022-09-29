@@ -1,6 +1,9 @@
+// Imports model building tools
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+
+// This file creates the user model
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -36,6 +39,7 @@ User.init(
       },
     }
   },
+  // Adds security to password storage
   {
     hooks: {
       beforeCreate: async (newUserData) => {
@@ -55,4 +59,5 @@ User.init(
   }
 );
 
+// Exports user
 module.exports = User;

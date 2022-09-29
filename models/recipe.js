@@ -1,5 +1,8 @@
+// Imports model building tools
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+
+// This file creates the recipe model
 
 class Recipe extends Model { }
 
@@ -35,4 +38,5 @@ Recipe.init(
     }
 );
 
+// Exports recipe model
 module.exports = Recipe;

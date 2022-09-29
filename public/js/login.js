@@ -1,3 +1,6 @@
+// This file contains the login functionality of the webpage
+// It checks the user input fields to see if the login credentials match what is saved in the database
+
 const loginFormHandler = async (event) => {
   console.log('submit')
   event.preventDefault();
