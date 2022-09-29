@@ -1,3 +1,20 @@
+a:hover {
+    text-decoration: underline;
+}
+
+
+.customBorder {
+    margin-top: 3rem;
+    border-top: 3px red solid;
+}
+
+.footerList {
+    list-style-type: none;
+}
+
+.footerList a {
+    font-weight: bold;
+}
 
 .recipe-builder {
     height: 40px;
@@ -10,7 +27,7 @@
 
 .recipeCard:hover{
     transform: translate(-2px,-2px);
-    box-shadow: 5px 5px 0 #fec445;
+    box-shadow: 5px 5px 0 red;
 }
 .recipeContainer{
     height: 500px;

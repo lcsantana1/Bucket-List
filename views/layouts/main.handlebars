@@ -8,12 +8,12 @@
     <title>Recipe Finder</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-       
-    <link rel="stylesheet" href="/css/style.css"> 
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand text-danger" href="/">Recipe Finder</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -52,12 +52,36 @@
     <main class="container">
         {{{body}}}
     </main>
-
+    <footer class="customBorder">
+        <div class="row">
+            <div class="col-sm-5 m-3 mr-3">
+                <h3 class="text-danger">Recipe Finder</h3>
+                <p class="card-text">Sign up for our weekly newsletter!</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control border border-danger" style="max-width: 20rem;"
+                        placeholder="Email">
+                    <div class="input-group-append">
+                        <span class="rounded-right btn btn-danger " id="basic-addon2">Sign up</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 m-3">
+                <ul class="footerList">
+                    <li><a class="btn text-danger" href="/">Recipes</a></li>
+                    <li><a class="btn text-danger" href="">About Us</a></li>
+                    <li><a class="btn text-danger" href="/contact">Contact</a></li>
+                    <li><a class="btn text-danger" href="/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
