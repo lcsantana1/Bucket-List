@@ -51,6 +51,10 @@ router.get('/profile',  async (req, res) => {
         {
           model: Ingredient,
           attributes: ['id', 'ingredient_name']
+        },
+        {
+          model: User,
+          attributes: ["id", "name"]
         }
       ]
     });
