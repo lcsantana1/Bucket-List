@@ -25,7 +25,8 @@ The app is fully functional from the deployed page and does not require installa
 
 Link to Deployed Application: [Recipe Builder](https://murmuring-sea-48556.herokuapp.com/)
 
-https://files.slack.com/files-pri/T03DVJ80FL3-F044JKCS58S/screencapture-murmuring-sea-48556-herokuapp-2022-09-29-18_07_49.png
+
+![Screen Shot 2022-09-29 at 6 12 12 PM](https://user-images.githubusercontent.com/106941418/193163516-b5a97c92-7a7d-400b-955e-db0a362c4d94.png)
 
 
 ## Contributing
