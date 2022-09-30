@@ -1,9 +1,5 @@
 # Recipe Finder
 
-## Visual Example
-
-![Screen Shot 2022-09-29 at 11 11 15 AM](https://user-images.githubusercontent.com/106941418/193097035-7edd75c9-648f-4a60-ade9-880201514d71.png)
-
 
 ## Description
 
@@ -28,6 +24,9 @@ The app is fully functional from the deployed page and does not require installa
 ## Usage
 
 Link to Deployed Application: [Recipe Builder](https://murmuring-sea-48556.herokuapp.com/)
+
+https://files.slack.com/files-pri/T03DVJ80FL3-F044JKCS58S/screencapture-murmuring-sea-48556-herokuapp-2022-09-29-18_07_49.png
+
 
 ## Contributing
 
